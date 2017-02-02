@@ -1,4 +1,4 @@
-# OPAL
+# OPAL (Ordinary People Accelerating Learning)
 
 *OPAL* is design tool that uses artificial neural networks (ANN) to automate the design and optimization of other ANN: neural networks designing neural networks.  *OPAL* is available for download as a compiled library (developed in python3) for educational and research purposes.  Source code is available for educational and research purposes upon request at [opal@ece.mcgill.ca](mailto:opal@ece.mcgill.ca); for commercialization options, [contact us](mailto:opal@ece.mcgil.ca).
 
