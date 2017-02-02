@@ -9,9 +9,9 @@
 
 The design of ANN hyper-parameters has long been considered unwieldy, unintuitive, and, as a consequence, ideal for automated hyper-parameter optimization techniques.  Most current approaches focus on optimizing accuracy, with little regard to the resulting computational resource requirements.  *OPAL* uses response surface modeling to learn the relationship between ANN hyper-parameters and network accuracy, and further employs a model of the cost of network implementation (e.g., in C or CUDA) to direct ANN design space exploration and expose the best accuracy-cost trade-offs possible.
 
-## Usage
+<!-- ## Usage
 
 
 
-## Frequently Asked Questions
+## Frequently Asked Questions -->
 
