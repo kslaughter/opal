@@ -11,20 +11,24 @@ The design of ANN hyper-parameters has long been considered unwieldy, unintuitiv
 
 ## Usage
 
-working on this part now...
+The tool can be used by simply executing the *OPAL* terminal script followed by a configuration file as input (e.g. './OPAL example.cfg'). 
 
-It should be noted that care should be taken when writing the *Parameters* and *RSM* sections of configuration files, as the parameters are executed by the Python interpreter. This ability was added for convenience when specifying parameters with many values to be explored; it is a given that the tool should not be run with *root* privileges.
+TBD
+
+### Configuration Files
+
+It should be noted that care should be taken when writing the \[Parameters\] and \[RSM\] sections of configuration files, as the parameters are executed by the Python interpreter. This ability was added for convenience when specifying parameters with many values to be explored; it is a given that the tool should not be run with root privileges.
 
 ## Dependencies
 
-Aside from a working Python installation, the following libraries are required:
-* [numpy](http://www.numpy.org/)
-* [scipy](http://www.scipy.org/)
-* [matplotlib](http://matplotlib.org/)
-* [theano](http://www.deeplearning.net/software/theano/)
-* [lasagne](https://github.com/Lasagne/Lasagne)
+Aside from a working Python 3.5 installation, the following libraries are required:
+ - [numpy](http://www.numpy.org/)
+ - [scipy](http://www.scipy.org/)
+ - [matplotlib](http://matplotlib.org/)
+ - [theano](http://www.deeplearning.net/software/theano/)
+ - [lasagne](https://github.com/Lasagne/Lasagne)
 
-The provided Python 3.5 build has been tested with *numpy* 2.6.2, *scipy* 0.18.1, *matplotlib* 2.0.0, *theano* 0.9.0b1, and *lasagne* 0.2.dev1. However, the release *may* still function with earlier versions.
+The provided build has been tested with numpy 2.6.2, scipy 0.18.1, matplotlib 2.0.0, theano 0.9.0b1, and lasagne 0.2.dev1. However, the release may still function with earlier versions.
 
 <!-- ## Frequently Asked Questions -->
 
