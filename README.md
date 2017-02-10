@@ -15,35 +15,40 @@ The tool can be used by simply executing the *OPAL* terminal script followed by 
 
 ## Configuration Files
 
-The general structure of the configuration files is split up into five distinct sections: \[General\], \[DSE\], \[Cost\], \[Parameters\], and \[RSM\]. The possible parameters and values for each section are outlined below.
+The general structure of the configuration files is split up into five distinct sections: [General], [DSE], [Cost], [Parameters], and [RSM]. The possible parameters and values for each section are outlined below.
 
-### General Section:
+### [General] Section:
 
-The \[General\] section contains the configuration options pertinent to the input and output file locations, and type of design problem. The possible input to this section are:
+The [General] section contains the configuration options pertinent to the input and output file locations, and type of design problem. The possible input to this section are:
 
 Parameter | Description | Possible Values
 --------- | ----------- | ---------------
-'verbose' | a | a
-'experiment_name' | a | a
+'verbose' | a | 'True' or 'False'
+'experiment_name' | a | Any string value that can be valid filename
 'results_dir' | a | a
+'train_input_filename' | a | a
+'train_output_filename' | a | a
+'test_input_filename' | a | a
+'test_output_filename' | a | a
 'dataset' | a | a
 'dataset_dir' | a | a
 'network_type' | a | a
 'problem_type' | a | a
 
-### DSE Section:
+
+### [DSE] Section:
 
 
-### Cost Section:
+### [Cost] Section:
 
 
-### Parameters Section:
+### [Parameters] Section:
 
 
-### RSM Section:
+### [RSM] Section:
 
 
-It should be noted that care should be taken when writing the \[Parameters\] and \[RSM\] sections of configuration files, as the parameter strings are executed by the Python interpreter. This ability was added for convenience when specifying parameters with many values to be explored; it is a given that the tool should not be run with root privileges.
+It should be noted that care should be taken when writing the [Parameters] and [RSM] sections of configuration files, as the parameter strings are executed by the Python interpreter. This ability was added for convenience when specifying parameters with many values to be explored; it is a given that the tool should not be run with root privileges.
 
 ## Dependencies
 
