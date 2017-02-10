@@ -32,11 +32,21 @@ train_input_filename | File name of the training set inputs, the arrays must be 
 train_output_filename | Same as above, but the training outputs | Any value that is a valid file name
 test_input_filename | Same as above, but the testing inputs | Any value that is a valid file name
 test_output_filename | Same as above, but the testing outputs | Any value that is a valid file name
-network_type | Type of neural network being designed | MLP, 1DCNN, or 2DCNN
+network_type | Type of neural network being designed | MLP or 2DCNN
 
 
 ### [DSE] Section:
 
+The [DSE] section contains the details of the design space exploration algorithm configuration, including how long to run for. The possible input to this section are:
+
+Parameter | Description | Possible Values
+--------- | ----------- | ---------------
+max_samples | The maximum samples predicted from the design space; if the true Pareto-optimal front is found by the tool, without a value for max_samples the algorithm will run forever re-sampling the same solutions over and over. | Any numerical values, notations such as 1e6 will be converted to integers internally.
+max_iterations | The maximum number of solutions that will be trained and tested, this is what determines the algorithm run time. | This must be a valid integer value.
+initial_iterations | | 
+storage_period | | 
+sigma | | 
+alpha | | 
 
 ### [Cost] Section:
 
