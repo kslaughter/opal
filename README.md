@@ -55,7 +55,7 @@ alpha | |
 
 ### [Cost] Section:
 
-The [Cost] section bla bla bla...
+The [Cost] section.
 
 Parameter | Description | Possible Values
 --------- | ----------- | ---------------
@@ -66,7 +66,7 @@ max_cost |  |
 
 ### [Parameters] Section:
 
-The [Parameters] section bla bla bla...
+The [Parameters] section.
 
 Parameter | Description | Possible Values
 --------- | ----------- | ---------------
@@ -76,7 +76,7 @@ Parameter | Description | Possible Values
 
 ### [RSM] Section:
 
-The [RSM] section bla bla bla...
+The [RSM] section.
 
 Parameter | Description | Possible Values
 --------- | ----------- | ---------------
@@ -89,9 +89,12 @@ fc_layers |  |
 fc_dropouts |  | 
 fc_activation |  | 
 conv_filters |  | 
-conv_ |  | 
- |  | 
- |  | 
+conv_kernels |  | 
+conv_strides |  | 
+conv_pads |  | 
+conv_pools |  | 
+conv_dropouts |  | 
+conv_activation |  | 
 out_activation |  | 
 
 Note that care should be taken when writing the [Parameters] and [RSM] sections of configuration files, as the parameter strings are executed by the Python interpreter. This ability was added for convenience when specifying parameters with many values to be explored; it is a given that the tool should not be run with root privileges.
