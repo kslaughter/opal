@@ -36,7 +36,7 @@ train_input_filename | File name of the training set inputs, the arrays must be 
 train_output_filename | Same as above, but the training outputs | Any value that is a valid file name
 test_input_filename | Same as above, but the testing inputs | Any value that is a valid file name
 test_output_filename | Same as above, but the testing outputs | Any value that is a valid file name
-network_type | Type of neural network being designed | *MLP* or *2DCNN*
+network_type | Type of neural network being designed | *MLP* or *CNN*
 
 
 ### [DSE] Section:
