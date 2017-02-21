@@ -45,12 +45,12 @@ The [DSE] section contains the details of the design space exploration algorithm
 
 Parameter | Description | Possible Values
 --------- | ----------- | ---------------
-max_samples | The maximum samples predicted from the design space; if the true Pareto-optimal front is found by the tool, without a value for *max_samples* the algorithm will run forever re-sampling the same solutions over and over. | Any numerical values, notations such as *1e6* will be converted to integers internally.
-max_iterations | The maximum number of solutions that will be trained and tested, this is what determines the algorithm run time. | This must be a valid integer value.
-initial_iterations | | 
-storage_period | | 
-sigma | | 
-alpha | | 
+max_samples | The maximum samples predicted from the design space; if the true Pareto-optimal front is found by the tool, without a value for *max_samples* the algorithm will run forever re-sampling the same solutions over and over. | Any numerical value, notations such as *1e6* will be converted to integers internally.
+max_iterations | The maximum number of solutions that will be trained and tested, this is what determines the algorithm run time. | Any valid integer value.
+initial_iterations | The number of solutions to be trained and tested before the RSM neural network is trained. | Any valid integer value.
+storage_period | The number of solutions evaluated between periodically saving the results to disk. The saving process searches through all explored solutions to build the Pareto-optimal front; it is best to limit this when exploring very large design spaces. | Any valid integer value.
+sigma | Parameter controlling how far from a solution the next point is sampled from. The next point in the chain will be sampled from a normal distribution centred around the previous point, where larger *sigma* values will result in narrower distributions. | Any valid floating point value; the default is assumed to be 3 if not defined.
+alpha | The probability with which solutions that are predicted to be Pareto-dominated are accepted with; solutions which are predicted to be Pareto-optimal are therefore accepted with probability *1-alpha*.  | Any valid floating point value, notations such as *1e-4* will be evaluated internally.
 
 
 ### [Cost] Section:
@@ -59,9 +59,9 @@ The [Cost] section.
 
 Parameter | Description | Possible Values
 --------- | ----------- | ---------------
-weight_cost |  | 
-mac_cost |  | 
-max_cost |  | 
+weight_cost | The weighted cost given to network weights. | Any valid floating point value.
+mac_cost | The weighted cost given to the need for a multiply-accumulate operation. | Any valid floating point value.
+max_cost | The maximum network cost that will be evaluated; useful when exploring very deep architectures. | Any valid floating point value, notations such as *1e5* will be evaluated internally.
 
 
 ### [Parameters] Section:
@@ -109,7 +109,7 @@ Aside from a working Python installation (>= 3.4), the following libraries are r
  - [theano](http://www.deeplearning.net/software/theano/)
  - [lasagne](https://github.com/Lasagne/Lasagne)
 
-The provided AMD64 builds have been tested on Ubuntu versions 14.04 and 16.04, with numpy 1.11.3, scipy 0.18.1, matplotlib 2.0.0, theano 0.9.0b1, and lasagne 0.2.dev1. However, the release may still function with earlier versions.
+The provided AMD64 builds have been tested on Ubuntu versions 14.04 and 16.04, with numpy 1.11.3, scipy 0.18.1, matplotlib 2.0.0, theano 0.9.0rc1, and lasagne 0.2.dev1. However, the release may still function with earlier versions.
 
 
 <!-- ## Frequently Asked Questions -->
