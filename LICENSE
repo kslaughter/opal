@@ -4,11 +4,12 @@ WHEREAS the END USER desires to use the Software for educational or non-commerci
 MCGILL and the END USER agree as follows:
 
 1.	DEFINITIONS. The following definitions apply to this Agreement:
-a.	“Software” means the  
+a.	“Software” means the
 b.	“Software Documentation” means all documentation readily available for the Software at the Effective Date.
 
-2.	RESEARCH EVALUATION PURPOSE.	The evaluation period is effective for a maximum of five (5) years from the Effective Date. During the evaluation period, END USER shall use the Software for research evaluation purposes only. Should END USER decided to publish the results of the research, END USER will acknowledge the use of the software with a citation to Sean C. Smithson, Guang Yang, Warren J. Gross, and Brett H. Meyer, "Neural networks designing neural networks: Multi-objective hyper-parameter optimization," 2016 International Conference On Computer Aided Design (ICCAD’16), November 2016.  END USER will provide MCGILL with a report of the Software at upon termination of this agreement and return or destroy all copies of the Software.
-2.1		Restrictions
+2.	RESEARCH EVALUATION PURPOSE.
+The evaluation period is effective for a maximum of five (5) years from the Effective Date. During the evaluation period, END USER shall use the Software for research evaluation purposes only. Should END USER decided to publish the results of the research, END USER will acknowledge the use of the software with a citation to Sean C. Smithson, Guang Yang, Warren J. Gross, and Brett H. Meyer, "Neural networks designing neural networks: Multi-objective hyper-parameter optimization," 2016 International Conference On Computer Aided Design (ICCAD’16), November 2016. END USER will provide MCGILL with a report of the Software at upon termination of this agreement and return or destroy all copies of the Software.
+2.1	    Restrictions
 2.2		END USER agrees that it will not;
 2.2.1	use Software for any commercial activity without first acquiring a 	royalty bearing license from MCGILL;
 2.2.2	sell, lease, loan, encumber or otherwise deal with any portion of the Software;
@@ -16,16 +17,16 @@ b.	“Software Documentation” means all documentation readily available for th
 
 3. 	DISCLAIMER OF WARRANTIES AND LIABILITIES
 3.1	MERCHANTABILITY OF SOFTWARE
-The Software and the Software Documentation and all other technology, if any, licensed under this Agreement are provided on an “as is” basis.  Without limiting the foregoing, MCGILL makes no representations, extends no warranties of any kind, either express or implied, (a) concerning the merchantability of the Software and its fitness for any purpose, or (b) concerning the performance, the usefulness, the quality or the operation of the Software or the results stemming from its intended or other use.  END USER is solely responsible to determine and assure, by any means, the appropriateness of the Software for its needs, its adequate performance and to assure that it will not cause any damages to any persons or property.
+The Software and the Software Documentation and all other technology, if any, licensed under this Agreement are provided on an “as is” basis. Without limiting the foregoing, MCGILL makes no representations, extends no warranties of any kind, either express or implied, (a) concerning the merchantability of the Software and its fitness for any purpose, or (b) concerning the performance, the usefulness, the quality or the operation of the Software or the results stemming from its intended or other use. END USER is solely responsible to determine and assure, by any means, the appropriateness of the Software for its needs, its adequate performance and to assure that it will not cause any damages to any persons or property.
 
 3.2	CORRECTIONS
-MCGILL makes no representations, extends no warranties of any kind, either express or implied, that the Software is free from error, that they will perform without interruption, that it will be compatible with the END USER’s equipment, software or operating system configuration, or that it will meet the END USER’s needs.  MCGILL is under no obligation to correct any errors deemed to be internal (“Malfunctions”) that may arise in any version of the Software, the use of the Software or any technology licensed hereunder will not infringe any patent, copyright, trademark, service mark, or other proprietary rights of others.  MCGILL shall not be liable to END USER with respect to: any claim arising from use of the Software and technical information or any technology licensed under this Agreement or from the development, use or sale of Software; or any claim for loss of profits, loss or interruption of business, or for indirect, special or consequential damages of any kind, even if the MCGILL has been advised of the possibility of such damage or loss.
+MCGILL makes no representations, extends no warranties of any kind, either express or implied, that the Software is free from error, that they will perform without interruption, that it will be compatible with the END USER’s equipment, software or operating system configuration, or that it will meet the END USER’s needs. MCGILL is under no obligation to correct any errors deemed to be internal (“Malfunctions”) that may arise in any version of the Software, the use of the Software or any technology licensed hereunder will not infringe any patent, copyright, trademark, service mark, or other proprietary rights of others. MCGILL shall not be liable to END USER with respect to: any claim arising from use of the Software and technical information or any technology licensed under this Agreement or from the development, use or sale of Software; or any claim for loss of profits, loss or interruption of business, or for indirect, special or consequential damages of any kind, even if the MCGILL has been advised of the possibility of such damage or loss.
 
-3.3		Notwithstanding anything in this Agreement to the contrary, nothing in this 	Agreement shall be construed as:
+3.3	Notwithstanding anything in this Agreement to the contrary, nothing in this Agreement shall be construed as:
 (a)	A warranty or representation by MCGILL as to its rights in the Software or in any other technology;
 (b)	An obligation to furnish any technology not specifically agreed to in this Agreement or to provide any services other than those specified in this Agreement if any.
 
-4.  	INDEMNIFICATION
+4.  INDEMNIFICATION
 4.1	END USER shall indemnify, defend and hold MCGILL, their employees, students, officers, directors, agents, affiliates, and representatives, harmless from and against any and all liability, demands damages, losses, and expenses (including attorney fees), for death, personal injury, illness, property damage, non-compliance with applicable laws and any other claim, proceeding, demand, expense and liability of any kind whatsoever in connection with or arising out of the use by or on behalf of END USER, of any Software or of any technology licensed hereunder.
 4.2	MCGILL hereby disclaims any indemnification covenant in favour of the END USER.
 
@@ -33,4 +34,4 @@ MCGILL makes no representations, extends no warranties of any kind, either expre
 END USER shall not use, either directly or indirectly, the name of McGill University or any of its officers, employees, students or board members in any publicity or advertising unless a copy of the same is submitted to and approved in writing by MCGILL prior to any such use.
 
 6.	APPLICABLE LAW.		 
-This Agreement shall be construed and the rights of the parties determined in accordance 	with the laws in force in the province of Quebec.
+This Agreement shall be construed and the rights of the parties determined in accordance with the laws in force in the province of Quebec.
