@@ -102,14 +102,14 @@ Note that care should be taken when writing the [Parameters] and [RSM] sections 
 
 ## Dependencies
 
-Aside from a working Python installation (>= 3.4), the following libraries are required:
+Aside from a working Python installation (>= 3.5), the following libraries are required:
  - [numpy](http://www.numpy.org/)
  - [scipy](http://www.scipy.org/)
  - [matplotlib](http://matplotlib.org/)
- - [theano](http://www.deeplearning.net/software/theano/)
- - [lasagne](https://github.com/Lasagne/Lasagne)
+ - [tensorflow](https://www.tensorflow.org/)
+ - [keras](https://keras.io/)
 
-The provided AMD64 builds have been tested on Ubuntu versions 14.04 and 16.04, with numpy 1.11.3, scipy 0.18.1, matplotlib 2.0.0, theano 0.9.0rc1, and lasagne 0.2.dev1. However, the release may still function with earlier versions.
+The provided AMD64 builds have been tested on Ubuntu versions 14.04 and 16.04, with numpy 1.11.3, scipy 0.18.1, matplotlib 2.0.0, tensorflow 1.0.0, and keras 1.2.2. However, the release may still function with earlier versions.
 
 
 <!-- ## Frequently Asked Questions -->
