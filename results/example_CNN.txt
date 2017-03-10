@@ -1,0 +1,271 @@
+Experiment name: example_CNN
+
+DSE of CIFAR-10 dataset:
+
+	conv_depth:	[1 2 3 4 5 6 7 8 9]
+	fc_depth:	[0 1 2]
+	fc_layers:	[ 32  64 128 256]
+	fc_layers_local:	['fc_depth']
+	conv_filters:	[ 16  32  64 128 256]
+	conv_filters_local:	['conv_depth']
+	conv_activation:	['ReLU']
+	fc_activation:	['ReLU']
+	out_activation:	['softmax']
+	conv_pooltype:	['max2d']
+	conv_pools:	[1, 2, 3]
+	conv_pools_local:	['conv_depth']
+	conv_kernels:	[1, 3, 5, 7]
+	conv_kernels_local:	['conv_depth']
+	conv_strides:	[1, 2, 3]
+	conv_strides_local:	['conv_depth']
+	learning_rate:	[ 0.001       0.00180165  0.00324594  0.00584804  0.0105361   0.01898235
+  0.03419952  0.0616155   0.11100946  0.2       ]
+	epochs:	[10]
+	batchsize:	[200]
+	updates:	['ADAM']
+	loss:	['categorical_crossentropy']
+
+Pareto-optimal results:
+fc_layers: [], conv_filters: [32, 128, 128], conv_pools: [2, 1, 3], conv_kernels: [5, 5, 7], conv_strides: [1, 1, 2], learning_rate: 0.0010000000474974513, Error: 0.248500006199, Cost: 17221.5216
+fc_layers: [], conv_filters: [16, 256, 128], conv_pools: [2, 1, 3], conv_kernels: [5, 5, 7], conv_strides: [1, 2, 2], learning_rate: 0.0010000000474974513, Error: 0.274500014782, Cost: 16490.5648
+fc_layers: [], conv_filters: [64, 256, 16], conv_pools: [2, 2, 2], conv_kernels: [5, 3, 3], conv_strides: [1, 1, 1], learning_rate: 0.010536102578043938, Error: 0.294200019836, Cost: 8209.7584
+fc_layers: [], conv_filters: [32, 128, 64], conv_pools: [2, 2, 2], conv_kernels: [5, 3, 5], conv_strides: [1, 2, 1], learning_rate: 0.010536102578043938, Error: 0.318200018406, Cost: 7195.7424
+fc_layers: [], conv_filters: [64, 64, 16], conv_pools: [3, 1, 3], conv_kernels: [7, 5, 5], conv_strides: [1, 2, 1], learning_rate: 0.005848035681992769, Error: 0.31840002656, Cost: 5167.9536
+fc_layers: [], conv_filters: [64, 128, 32], conv_pools: [3, 2, 2], conv_kernels: [7, 5, 3], conv_strides: [2, 1, 1], learning_rate: 0.018982350826263428, Error: 0.330100023746, Cost: 3813.432
+fc_layers: [], conv_filters: [64, 128, 16], conv_pools: [3, 3, 2], conv_kernels: [7, 3, 3], conv_strides: [1, 1, 1], learning_rate: 0.010536102578043938, Error: 0.334500021935, Cost: 3609.3232
+fc_layers: [], conv_filters: [32, 32], conv_pools: [3, 2], conv_kernels: [5, 7], conv_strides: [2, 2], learning_rate: 0.0010000000474974513, Error: 0.353700015545, Cost: 2205.1504
+fc_layers: [], conv_filters: [16, 64], conv_pools: [3, 2], conv_kernels: [5, 7], conv_strides: [2, 2], learning_rate: 0.0010000000474974513, Error: 0.3604000175, Cost: 1692.6512
+fc_layers: [], conv_filters: [16, 64], conv_pools: [3, 2], conv_kernels: [5, 5], conv_strides: [2, 2], learning_rate: 0.010536102578043938, Error: 0.371800019741, Cost: 1283.768
+fc_layers: [], conv_filters: [16, 32], conv_pools: [3, 2], conv_kernels: [5, 5], conv_strides: [2, 2], learning_rate: 0.0010000000474974513, Error: 0.378700022697, Cost: 961.464
+fc_layers: [], conv_filters: [16, 128, 16], conv_pools: [2, 3, 2], conv_kernels: [5, 3, 1], conv_strides: [2, 1, 1], learning_rate: 0.018982350826263428, Error: 0.405900020599, Cost: 716.4336
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [3, 5], conv_strides: [2, 2], learning_rate: 0.010536102578043938, Error: 0.414800020456, Cost: 663.8384
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [5, 3], conv_strides: [2, 2], learning_rate: 0.010536102578043938, Error: 0.475900031328, Cost: 527.7232
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 3], conv_kernels: [5, 3], conv_strides: [3, 1], learning_rate: 0.018982350826263428, Error: 0.476500023007, Cost: 454.8232
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [3, 3], conv_strides: [3, 1], learning_rate: 0.0018016481772065163, Error: 0.502700025439, Cost: 365.0056
+fc_layers: [], conv_filters: [64, 16], conv_pools: [3, 3], conv_kernels: [3, 1], conv_strides: [2, 1], learning_rate: 0.005848035681992769, Error: 0.583200016022, Cost: 313.4384
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 3], conv_kernels: [3, 1], conv_strides: [3, 1], learning_rate: 0.005848035681992769, Error: 0.615700012445, Cost: 228.7112
+fc_layers: [], conv_filters: [32, 16], conv_pools: [3, 3], conv_kernels: [1, 1], conv_strides: [3, 1], learning_rate: 0.0032459362410008907, Error: 0.679400014281, Cost: 200.8392
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [1, 1], conv_strides: [3, 1], learning_rate: 0.0010000000474974513, Error: 0.689100015163, Cost: 183.8024
+fc_layers: [], conv_filters: [16, 16], conv_pools: [2, 2], conv_kernels: [1, 1], conv_strides: [3, 3], learning_rate: 0.11100946366786957, Error: 0.816500007212, Cost: 183.2264
+
+All results:
+fc_layers: [128, 128], conv_filters: [256, 16], conv_pools: [3, 2], conv_kernels: [5, 1], conv_strides: [2, 1], learning_rate: 0.06161550432443619, Error: 0.467300023437, Cost: 26557.4832
+fc_layers: [], conv_filters: [64, 256, 32], conv_pools: [2, 2, 1], conv_kernels: [3, 1, 1], conv_strides: [2, 1, 1], learning_rate: 0.03419951722025871, Error: 0.357400015593, Cost: 5612.6128
+fc_layers: [], conv_filters: [128, 16], conv_pools: [2, 3], conv_kernels: [1, 1], conv_strides: [1, 2], learning_rate: 0.0018016481772065163, Error: 0.658700011969, Cost: 856.7088
+fc_layers: [], conv_filters: [64], conv_pools: [2], conv_kernels: [7], conv_strides: [1], learning_rate: 0.0032459362410008907, Error: 0.426400028467, Cost: 166250.4496
+fc_layers: [128, 32], conv_filters: [32, 256, 128], conv_pools: [1, 2, 3], conv_kernels: [3, 1, 3], conv_strides: [1, 2, 1], learning_rate: 0.0018016481772065163, Error: 0.346900016069, Cost: 74138.3856
+fc_layers: [], conv_filters: [16, 128], conv_pools: [3, 2], conv_kernels: [3, 3], conv_strides: [1, 2], learning_rate: 0.018982350826263428, Error: 0.36290002346, Cost: 5552.8496
+fc_layers: [], conv_filters: [128, 16, 32], conv_pools: [3, 2, 1], conv_kernels: [5, 1, 1], conv_strides: [2, 2, 1], learning_rate: 0.005848035681992769, Error: 0.55730001688, Cost: 687.9536
+fc_layers: [], conv_filters: [16, 32, 128], conv_pools: [2, 2, 2], conv_kernels: [1, 3, 3], conv_strides: [1, 1, 3], learning_rate: 0.0018016481772065163, Error: 0.436700028777, Cost: 2030.4176
+fc_layers: [32], conv_filters: [32, 128], conv_pools: [2, 2], conv_kernels: [5, 3], conv_strides: [1, 1], learning_rate: 0.11100946366786957, Error: 0.341000019312, Cost: 265800.5424
+fc_layers: [], conv_filters: [64, 256, 16], conv_pools: [3, 2, 1], conv_kernels: [1, 1, 1], conv_strides: [1, 3, 1], learning_rate: 0.20000000298023224, Error: 0.722400010228, Cost: 1004.472
+fc_layers: [], conv_filters: [32, 16, 16], conv_pools: [1, 3, 1], conv_kernels: [5, 3, 5], conv_strides: [3, 1, 3], learning_rate: 0.005848035681992769, Error: 0.443700028062, Cost: 1243.2776
+fc_layers: [], conv_filters: [32, 128], conv_pools: [2, 2], conv_kernels: [7, 7], conv_strides: [1, 1], learning_rate: 0.03419951722025871, Error: 0.34090002656, Cost: 88198.7632
+fc_layers: [], conv_filters: [16, 64], conv_pools: [3, 3], conv_kernels: [1, 1], conv_strides: [3, 1], learning_rate: 0.0032459362410008907, Error: 0.675000014901, Cost: 667.2584
+fc_layers: [], conv_filters: [16, 64], conv_pools: [3, 1], conv_kernels: [1, 1], conv_strides: [3, 3], learning_rate: 0.0010000000474974513, Error: 0.751900008023, Cost: 666.3368
+fc_layers: [], conv_filters: [16, 128, 128, 32], conv_pools: [2, 2, 2, 1], conv_kernels: [3, 3, 3, 3], conv_strides: [1, 1, 2, 1], learning_rate: 0.03419951722025871, Error: 0.369300029278, Cost: 4394.5904
+fc_layers: [256], conv_filters: [16, 128, 256], conv_pools: [2, 2, 2], conv_kernels: [3, 7, 3], conv_strides: [1, 1, 2], learning_rate: 0.0010000000474974513, Error: 0.291900007725, Cost: 270349.7136
+fc_layers: [256], conv_filters: [32, 256, 16], conv_pools: [2, 3, 1], conv_kernels: [3, 7, 5], conv_strides: [1, 1, 2], learning_rate: 0.005848035681992769, Error: 0.260100005865, Cost: 51206.776
+fc_layers: [256], conv_filters: [256, 256, 16], conv_pools: [2, 1, 3], conv_kernels: [3, 5, 1], conv_strides: [1, 1, 2], learning_rate: 0.0018016481772065163, Error: 0.385700017214, Cost: 37876.9072
+fc_layers: [256], conv_filters: [32, 32, 64], conv_pools: [2, 3, 2], conv_kernels: [7, 5, 1], conv_strides: [1, 1, 3], learning_rate: 0.005848035681992769, Error: 0.439000019431, Cost: 22618.68
+fc_layers: [], conv_filters: [128, 16, 32], conv_pools: [2, 1, 2], conv_kernels: [1, 1, 1], conv_strides: [1, 3, 3], learning_rate: 0.005848035681992769, Error: 0.710900013447, Cost: 525.0608
+fc_layers: [], conv_filters: [256, 16], conv_pools: [3, 2], conv_kernels: [1, 1], conv_strides: [2, 3], learning_rate: 0.010536102578043938, Error: 0.70140001446, Cost: 433.0544
+fc_layers: [], conv_filters: [32, 16], conv_pools: [3, 2], conv_kernels: [7, 3], conv_strides: [2, 2], learning_rate: 0.010536102578043938, Error: 0.45130002141, Cost: 885.7648
+fc_layers: [64], conv_filters: [32, 256, 128], conv_pools: [2, 1, 2], conv_kernels: [5, 7, 7], conv_strides: [2, 2, 1], learning_rate: 0.0010000000474974513, Error: 0.285300011635, Cost: 49599.48
+fc_layers: [], conv_filters: [16, 32], conv_pools: [3, 2], conv_kernels: [5, 1], conv_strides: [3, 1], learning_rate: 0.20000000298023224, Error: 0.618300014138, Cost: 479.6808
+fc_layers: [64, 32], conv_filters: [32, 128, 256], conv_pools: [2, 3, 2], conv_kernels: [7, 7, 3], conv_strides: [1, 1, 3], learning_rate: 0.0018016481772065163, Error: 0.341200021505, Cost: 25761.1312
+fc_layers: [64], conv_filters: [32, 256, 128], conv_pools: [1, 2, 3], conv_kernels: [5, 7, 5], conv_strides: [3, 2, 1], learning_rate: 0.018982350826263428, Error: 0.384100023508, Cost: 17825.076
+fc_layers: [32], conv_filters: [128, 256, 16], conv_pools: [3, 2, 1], conv_kernels: [7, 7, 5], conv_strides: [3, 1, 2], learning_rate: 0.005848035681992769, Error: 0.423600031137, Cost: 14237.5624
+fc_layers: [], conv_filters: [64, 256, 128], conv_pools: [1, 1, 3], conv_kernels: [5, 7, 3], conv_strides: [1, 2, 1], learning_rate: 0.005848035681992769, Error: 0.27850001812, Cost: 48325.368
+fc_layers: [], conv_filters: [128, 256, 64, 64, 16], conv_pools: [2, 2, 1, 2, 1], conv_kernels: [3, 1, 3, 1, 1], conv_strides: [1, 1, 2, 1, 2], learning_rate: 0.0018016481772065163, Error: 0.512500024438, Cost: 3456.4016
+fc_layers: [], conv_filters: [32, 128, 16], conv_pools: [2, 2, 3], conv_kernels: [5, 5, 5], conv_strides: [1, 1, 3], learning_rate: 0.018982350826263428, Error: 0.3549000144, Cost: 6471.032
+fc_layers: [], conv_filters: [16, 64, 16], conv_pools: [1, 2, 1], conv_kernels: [7, 5, 3], conv_strides: [3, 1, 2], learning_rate: 0.06161550432443619, Error: 0.399400023222, Cost: 3087.2392
+fc_layers: [], conv_filters: [16, 16], conv_pools: [2, 3], conv_kernels: [7, 3], conv_strides: [3, 1], learning_rate: 0.0018016481772065163, Error: 0.536000020504, Cost: 606.1384
+fc_layers: [], conv_filters: [16, 32, 64], conv_pools: [1, 2, 2], conv_kernels: [7, 7, 7], conv_strides: [1, 1, 2], learning_rate: 0.005848035681992769, Error: 0.328700016737, Cost: 20399.3392
+fc_layers: [], conv_filters: [16, 32], conv_pools: [2, 3], conv_kernels: [1, 3], conv_strides: [3, 1], learning_rate: 0.06161550432443619, Error: 0.701800013781, Cost: 497.8376
+fc_layers: [], conv_filters: [32, 16], conv_pools: [3, 1], conv_kernels: [5, 1], conv_strides: [3, 3], learning_rate: 0.018982350826263428, Error: 0.717000010312, Cost: 333.7224
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 3], conv_kernels: [1, 1], conv_strides: [3, 1], learning_rate: 0.03419951722025871, Error: 0.763100009263, Cost: 183.8024
+fc_layers: [], conv_filters: [16, 256], conv_pools: [3, 3], conv_kernels: [7, 1], conv_strides: [3, 1], learning_rate: 0.03419951722025871, Error: 0.495800024271, Cost: 2870.5352
+fc_layers: [], conv_filters: [16, 256], conv_pools: [3, 2], conv_kernels: [1, 3], conv_strides: [2, 2], learning_rate: 0.03419951722025871, Error: 0.763100009263, Cost: 2740.2928
+fc_layers: [128], conv_filters: [16, 256, 32], conv_pools: [1, 2, 3], conv_kernels: [7, 3, 3], conv_strides: [1, 2, 1], learning_rate: 0.010536102578043938, Error: 0.321400010586, Cost: 22797.0864
+fc_layers: [], conv_filters: [128, 256, 32], conv_pools: [2, 2, 2], conv_kernels: [5, 5, 7], conv_strides: [1, 1, 2], learning_rate: 0.0010000000474974513, Error: 0.286400017738, Cost: 25004.4848
+fc_layers: [], conv_filters: [64, 32], conv_pools: [3, 2], conv_kernels: [3, 1], conv_strides: [3, 1], learning_rate: 0.018982350826263428, Error: 0.709400011301, Cost: 440.9736
+fc_layers: [128, 32], conv_filters: [64, 256, 128], conv_pools: [3, 1, 2], conv_kernels: [5, 3, 3], conv_strides: [1, 1, 1], learning_rate: 0.0032459362410008907, Error: 0.30130002141, Cost: 422578.4752
+fc_layers: [], conv_filters: [128, 256, 128], conv_pools: [2, 1, 3], conv_kernels: [3, 3, 1], conv_strides: [1, 1, 2], learning_rate: 0.0032459362410008907, Error: 0.345200023651, Cost: 9032.2608
+fc_layers: [], conv_filters: [16, 256, 32], conv_pools: [3, 3, 3], conv_kernels: [1, 7, 1], conv_strides: [1, 1, 1], learning_rate: 0.0018016481772065163, Error: 0.520000016689, Cost: 1968.4912
+fc_layers: [], conv_filters: [64, 128, 32], conv_pools: [2, 2, 3], conv_kernels: [5, 5, 1], conv_strides: [2, 1, 1], learning_rate: 0.018982350826263428, Error: 0.404500024319, Cost: 3015.5696
+fc_layers: [32], conv_filters: [64, 128, 64], conv_pools: [2, 3, 2], conv_kernels: [7, 7, 3], conv_strides: [1, 1, 2], learning_rate: 0.018982350826263428, Error: 0.306900024414, Cost: 13758.776
+fc_layers: [], conv_filters: [32, 32, 16], conv_pools: [1, 3, 3], conv_kernels: [5, 1, 1], conv_strides: [1, 1, 1], learning_rate: 0.005848035681992769, Error: 0.444500021935, Cost: 2401.2976
+fc_layers: [], conv_filters: [16, 128, 64], conv_pools: [2, 3, 3], conv_kernels: [7, 1, 1], conv_strides: [1, 1, 2], learning_rate: 0.0010000000474974513, Error: 0.462800024152, Cost: 2057.1952
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 3], conv_kernels: [7, 1], conv_strides: [3, 1], learning_rate: 0.0010000000474974513, Error: 0.574600017667, Cost: 453.2552
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [7, 1], conv_strides: [2, 2], learning_rate: 0.20000000298023224, Error: 0.721400012374, Cost: 596.1392
+fc_layers: [], conv_filters: [32, 64, 16], conv_pools: [2, 2, 2], conv_kernels: [5, 3, 3], conv_strides: [1, 1, 2], learning_rate: 0.11100946366786957, Error: 0.507500023842, Cost: 2733.7648
+fc_layers: [128], conv_filters: [64, 256, 16], conv_pools: [3, 2, 1], conv_kernels: [7, 3, 3], conv_strides: [2, 1, 1], learning_rate: 0.0010000000474974513, Error: 0.333500020504, Cost: 13008.184
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 3], conv_kernels: [7, 3], conv_strides: [1, 1], learning_rate: 0.010536102578043938, Error: 0.463700029254, Cost: 2928.8496
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 3], conv_kernels: [3, 1], conv_strides: [2, 1], learning_rate: 0.010536102578043938, Error: 0.620900012255, Cost: 256.7984
+fc_layers: [], conv_filters: [16, 32, 16], conv_pools: [2, 2, 1], conv_kernels: [5, 3, 1], conv_strides: [3, 1, 2], learning_rate: 0.0032459362410008907, Error: 0.576800015569, Cost: 503.6424
+fc_layers: [32], conv_filters: [16, 256, 256], conv_pools: [2, 2, 2], conv_kernels: [3, 3, 7], conv_strides: [1, 1, 2], learning_rate: 0.0032459362410008907, Error: 0.297600018978, Cost: 47950.7888
+fc_layers: [], conv_filters: [16, 64, 32], conv_pools: [3, 2, 1], conv_kernels: [5, 7, 5], conv_strides: [2, 2, 1], learning_rate: 0.0010000000474974513, Error: 0.361100019217, Cost: 2981.8672
+fc_layers: [], conv_filters: [16, 256, 16], conv_pools: [1, 3, 3], conv_kernels: [7, 7, 3], conv_strides: [2, 1, 1], learning_rate: 0.0032459362410008907, Error: 0.405000027418, Cost: 5526.8912
+fc_layers: [], conv_filters: [128, 256, 256], conv_pools: [1, 1, 3], conv_kernels: [7, 5, 5], conv_strides: [3, 1, 2], learning_rate: 0.0018016481772065163, Error: 0.278800011873, Cost: 24635.5144
+fc_layers: [], conv_filters: [16, 256, 256], conv_pools: [1, 1, 3], conv_kernels: [7, 1, 5], conv_strides: [2, 2, 2], learning_rate: 0.018982350826263428, Error: 0.396100027561, Cost: 10157.0352
+fc_layers: [32], conv_filters: [64, 16, 16], conv_pools: [2, 1, 3], conv_kernels: [7, 3, 5], conv_strides: [2, 2, 1], learning_rate: 0.0010000000474974513, Error: 0.36970002532, Cost: 2344.376
+fc_layers: [64, 32], conv_filters: [32, 256, 128], conv_pools: [2, 3, 1], conv_kernels: [7, 5, 1], conv_strides: [1, 2, 2], learning_rate: 0.018982350826263428, Error: 0.523600016832, Cost: 13293.3168
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [5, 5], conv_strides: [2, 2], learning_rate: 0.0010000000474974513, Error: 0.414200028181, Cost: 800.312
+fc_layers: [], conv_filters: [32, 128], conv_pools: [3, 2], conv_kernels: [5, 3], conv_strides: [2, 2], learning_rate: 0.0032459362410008907, Error: 0.403900024891, Cost: 1809.1184
+fc_layers: [], conv_filters: [16, 128, 256], conv_pools: [2, 1, 3], conv_kernels: [5, 5, 7], conv_strides: [2, 1, 2], learning_rate: 0.0032459362410008907, Error: 0.312300014496, Cost: 10370.5264
+fc_layers: [], conv_filters: [32, 32], conv_pools: [3, 2], conv_kernels: [5, 1], conv_strides: [2, 2], learning_rate: 0.010536102578043938, Error: 0.581000016928, Cost: 569.6176
+fc_layers: [], conv_filters: [16, 128, 32], conv_pools: [2, 1, 2], conv_kernels: [7, 1, 1], conv_strides: [3, 1, 2], learning_rate: 0.0018016481772065163, Error: 0.580000016093, Cost: 752.5448
+fc_layers: [], conv_filters: [32, 128, 16], conv_pools: [3, 2, 1], conv_kernels: [7, 7, 7], conv_strides: [2, 1, 2], learning_rate: 0.0018016481772065163, Error: 0.337100012302, Cost: 8746.5008
+fc_layers: [], conv_filters: [64, 16, 64], conv_pools: [3, 1, 2], conv_kernels: [5, 7, 5], conv_strides: [2, 1, 1], learning_rate: 0.0018016481772065163, Error: 0.372200024128, Cost: 6964.152
+fc_layers: [256], conv_filters: [16, 256, 32], conv_pools: [3, 2, 2], conv_kernels: [5, 7, 7], conv_strides: [1, 1, 3], learning_rate: 0.018982350826263428, Error: 0.332900018692, Cost: 25711.1216
+fc_layers: [256, 64], conv_filters: [16, 128, 64], conv_pools: [1, 2, 3], conv_kernels: [3, 7, 7], conv_strides: [1, 1, 1], learning_rate: 0.018982350826263428, Error: 0.279100013971, Cost: 454318.584
+fc_layers: [256, 32], conv_filters: [128, 128, 16], conv_pools: [3, 3, 1], conv_kernels: [5, 5, 5], conv_strides: [1, 1, 2], learning_rate: 0.0032459362410008907, Error: 0.310900022984, Cost: 34499.3712
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [3, 1], conv_strides: [2, 3], learning_rate: 0.0018016481772065163, Error: 0.639600018859, Cost: 254.3792
+fc_layers: [], conv_filters: [64, 16], conv_pools: [3, 2], conv_kernels: [1, 1], conv_strides: [2, 2], learning_rate: 0.005848035681992769, Error: 0.778700008988, Cost: 237.8288
+fc_layers: [], conv_filters: [32, 64], conv_pools: [3, 2], conv_kernels: [7, 7], conv_strides: [1, 2], learning_rate: 0.005848035681992769, Error: 0.328600020409, Cost: 5659.4736
+fc_layers: [], conv_filters: [32, 32, 64], conv_pools: [3, 2, 1], conv_kernels: [7, 7, 7], conv_strides: [2, 2, 1], learning_rate: 0.0018016481772065163, Error: 0.400700027943, Cost: 4311.4544
+fc_layers: [], conv_filters: [16, 32], conv_pools: [3, 3], conv_kernels: [5, 3], conv_strides: [2, 1], learning_rate: 0.06161550432443619, Error: 0.506700024605, Cost: 705.464
+fc_layers: [], conv_filters: [16, 16], conv_pools: [2, 2], conv_kernels: [5, 3], conv_strides: [2, 3], learning_rate: 0.010536102578043938, Error: 0.491100029349, Cost: 527.7232
+fc_layers: [], conv_filters: [16, 16, 32], conv_pools: [2, 3, 1], conv_kernels: [7, 5, 5], conv_strides: [2, 1, 3], learning_rate: 0.005848035681992769, Error: 0.402300028801, Cost: 1727.4544
+fc_layers: [], conv_filters: [16, 32], conv_pools: [3, 2], conv_kernels: [5, 5], conv_strides: [2, 2], learning_rate: 0.0010000000474974513, Error: 0.378700022697, Cost: 961.464
+fc_layers: [128], conv_filters: [32, 256, 64, 32], conv_pools: [2, 3, 2, 1], conv_kernels: [7, 3, 7, 7], conv_strides: [1, 1, 2, 1], learning_rate: 0.0010000000474974513, Error: 0.40780002892, Cost: 23979.7808
+fc_layers: [], conv_filters: [128, 64, 64], conv_pools: [2, 2, 3], conv_kernels: [5, 7, 7], conv_strides: [1, 1, 3], learning_rate: 0.005848035681992769, Error: 0.36040002346, Cost: 22444.3312
+fc_layers: [64], conv_filters: [128, 128, 64], conv_pools: [2, 2, 2], conv_kernels: [5, 7, 7], conv_strides: [2, 1, 2], learning_rate: 0.005848035681992769, Error: 0.330600016117, Cost: 20598.1104
+fc_layers: [], conv_filters: [32, 16], conv_pools: [3, 3], conv_kernels: [1, 1], conv_strides: [2, 1], learning_rate: 0.03419951722025871, Error: 0.822900006473, Cost: 207.4416
+fc_layers: [], conv_filters: [16, 128], conv_pools: [3, 2], conv_kernels: [5, 5], conv_strides: [1, 2], learning_rate: 0.010536102578043938, Error: 0.431900031567, Cost: 6256.824
+fc_layers: [128], conv_filters: [16, 32, 16], conv_pools: [3, 2, 1], conv_kernels: [7, 7, 7], conv_strides: [1, 2, 1], learning_rate: 0.005848035681992769, Error: 0.351900023222, Cost: 13309.2784
+fc_layers: [64], conv_filters: [128, 256, 128], conv_pools: [3, 3, 2], conv_kernels: [5, 3, 5], conv_strides: [1, 1, 2], learning_rate: 0.010536102578043938, Error: 0.404800026417, Cost: 18089.3104
+fc_layers: [256], conv_filters: [64, 128], conv_pools: [3, 3], conv_kernels: [7, 7], conv_strides: [2, 1], learning_rate: 0.03419951722025871, Error: 0.346900024414, Cost: 39700.792
+fc_layers: [32], conv_filters: [128, 256, 256, 256], conv_pools: [3, 2, 2, 2], conv_kernels: [5, 7, 7, 7], conv_strides: [1, 1, 1, 1], learning_rate: 0.03419951722025871, Error: 0.299200012684, Cost: 47696.2736
+fc_layers: [], conv_filters: [32, 16], conv_pools: [3, 2], conv_kernels: [7, 7], conv_strides: [1, 3], learning_rate: 0.0018016481772065163, Error: 0.45620002389, Cost: 3624.0432
+fc_layers: [], conv_filters: [256, 256, 128], conv_pools: [3, 2, 3], conv_kernels: [3, 1, 1], conv_strides: [1, 1, 1], learning_rate: 0.010536102578043938, Error: 0.560800008774, Cost: 2257.6816
+fc_layers: [64], conv_filters: [16, 256, 128], conv_pools: [3, 2, 3], conv_kernels: [5, 7, 5], conv_strides: [1, 1, 2], learning_rate: 0.0018016481772065163, Error: 0.363000026941, Cost: 17686.7504
+fc_layers: [], conv_filters: [16, 32, 16], conv_pools: [3, 2, 2], conv_kernels: [1, 1, 1], conv_strides: [1, 1, 3], learning_rate: 0.03419951722025871, Error: 0.808900005817, Cost: 246.712
+fc_layers: [], conv_filters: [32, 32], conv_pools: [3, 1], conv_kernels: [7, 7], conv_strides: [2, 2], learning_rate: 0.0018016481772065163, Error: 0.393400009871, Cost: 4988.2928
+fc_layers: [256, 64], conv_filters: [32, 256, 128], conv_pools: [3, 2, 2], conv_kernels: [7, 5, 7], conv_strides: [2, 1, 1], learning_rate: 0.0010000000474974513, Error: 0.427800027132, Cost: 64417.72
+fc_layers: [], conv_filters: [32, 16], conv_pools: [2, 1], conv_kernels: [5, 7], conv_strides: [1, 1], learning_rate: 0.0018016481772065163, Error: 0.364600023031, Cost: 46341.0096
+fc_layers: [], conv_filters: [32, 256, 256], conv_pools: [2, 2, 1], conv_kernels: [3, 3, 7], conv_strides: [2, 1, 3], learning_rate: 0.018982350826263428, Error: 0.359900025129, Cost: 23716.472
+fc_layers: [128], conv_filters: [64, 128, 64], conv_pools: [1, 1, 2], conv_kernels: [5, 7, 7], conv_strides: [2, 2, 3], learning_rate: 0.0010000000474974513, Error: 0.375100028515, Cost: 21012.9328
+fc_layers: [], conv_filters: [32, 128, 16], conv_pools: [2, 2, 3], conv_kernels: [3, 7, 5], conv_strides: [1, 1, 1], learning_rate: 0.0032459362410008907, Error: 0.359300024509, Cost: 10003.3712
+fc_layers: [], conv_filters: [128, 256, 64], conv_pools: [2, 2, 3], conv_kernels: [5, 7, 3], conv_strides: [1, 1, 2], learning_rate: 0.005848035681992769, Error: 0.390300024748, Cost: 21674.5392
+fc_layers: [], conv_filters: [16, 16], conv_pools: [2, 3], conv_kernels: [5, 1], conv_strides: [2, 2], learning_rate: 0.03419951722025871, Error: 0.597500019073, Cost: 392.2352
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [5, 1], conv_strides: [2, 2], learning_rate: 0.0032459362410008907, Error: 0.614100010991, Cost: 391.4288
+fc_layers: [], conv_filters: [32, 32], conv_pools: [2, 2], conv_kernels: [5, 1], conv_strides: [3, 2], learning_rate: 0.005848035681992769, Error: 0.624200014472, Cost: 496.7176
+fc_layers: [], conv_filters: [64, 16], conv_pools: [2, 3], conv_kernels: [7, 1], conv_strides: [3, 1], learning_rate: 0.0032459362410008907, Error: 0.582000008821, Cost: 511.7384
+fc_layers: [], conv_filters: [32, 16], conv_pools: [2, 3], conv_kernels: [1, 1], conv_strides: [3, 1], learning_rate: 0.03419951722025871, Error: 0.800100005269, Cost: 204.5256
+fc_layers: [], conv_filters: [16, 256, 256], conv_pools: [2, 1, 1], conv_kernels: [3, 5, 7], conv_strides: [1, 1, 1], learning_rate: 0.0010000000474974513, Error: 0.254200009108, Cost: 697107.0384
+fc_layers: [], conv_filters: [16, 128, 128], conv_pools: [2, 3, 3], conv_kernels: [5, 7, 3], conv_strides: [1, 1, 1], learning_rate: 0.018982350826263428, Error: 0.319300011396, Cost: 5505.6048
+fc_layers: [], conv_filters: [64, 128, 256], conv_pools: [2, 1, 3], conv_kernels: [5, 7, 5], conv_strides: [2, 2, 1], learning_rate: 0.03419951722025871, Error: 0.368300020695, Cost: 9857.5792
+fc_layers: [], conv_filters: [64, 256, 256, 128], conv_pools: [2, 1, 3, 1], conv_kernels: [3, 7, 5, 3], conv_strides: [1, 1, 2, 2], learning_rate: 0.005848035681992769, Error: 0.329300012589, Cost: 22101.2656
+fc_layers: [], conv_filters: [32, 16], conv_pools: [2, 2], conv_kernels: [3, 1], conv_strides: [2, 3], learning_rate: 0.03419951722025871, Error: 0.653300017715, Cost: 271.992
+fc_layers: [], conv_filters: [32, 16], conv_pools: [3, 3], conv_kernels: [1, 1], conv_strides: [3, 1], learning_rate: 0.0032459362410008907, Error: 0.679400014281, Cost: 200.8392
+fc_layers: [32], conv_filters: [16, 16, 16], conv_pools: [1, 2, 3], conv_kernels: [7, 7, 3], conv_strides: [2, 1, 2], learning_rate: 0.010536102578043938, Error: 0.547900019288, Cost: 3645.5984
+fc_layers: [], conv_filters: [64, 128, 64], conv_pools: [1, 1, 1], conv_kernels: [7, 5, 1], conv_strides: [3, 3, 1], learning_rate: 0.0018016481772065163, Error: 0.395300027132, Cost: 12515.86
+fc_layers: [128], conv_filters: [64, 256, 256], conv_pools: [1, 1, 3], conv_kernels: [7, 7, 7], conv_strides: [1, 3, 1], learning_rate: 0.0032459362410008907, Error: 0.291600011587, Cost: 328895.8
+fc_layers: [], conv_filters: [128, 16], conv_pools: [2, 2], conv_kernels: [5, 1], conv_strides: [2, 3], learning_rate: 0.0032459362410008907, Error: 0.584900014997, Cost: 510.6864
+fc_layers: [256], conv_filters: [64, 256, 32], conv_pools: [2, 3, 2], conv_kernels: [3, 7, 7], conv_strides: [1, 1, 3], learning_rate: 0.018982350826263428, Error: 0.364800024033, Cost: 32877.0224
+fc_layers: [], conv_filters: [64, 256, 256], conv_pools: [1, 1, 3], conv_kernels: [7, 5, 7], conv_strides: [2, 2, 3], learning_rate: 0.0018016481772065163, Error: 0.284500011206, Cost: 18690.5136
+fc_layers: [], conv_filters: [256, 32, 256], conv_pools: [1, 1, 1], conv_kernels: [5, 1, 3], conv_strides: [2, 2, 3], learning_rate: 0.0018016481772065163, Error: 0.40950003624, Cost: 24099.7552
+fc_layers: [64], conv_filters: [32, 128, 128], conv_pools: [1, 3, 2], conv_kernels: [7, 5, 7], conv_strides: [1, 1, 3], learning_rate: 0.0010000000474974513, Error: 0.313700017929, Cost: 48572.1136
+fc_layers: [], conv_filters: [64, 256, 256], conv_pools: [1, 1, 1], conv_kernels: [5, 7, 7], conv_strides: [1, 1, 3], learning_rate: 0.010536102578043938, Error: 0.266000006199, Cost: 362347.6656
+fc_layers: [], conv_filters: [64, 256, 16], conv_pools: [2, 2, 2], conv_kernels: [5, 3, 3], conv_strides: [1, 1, 1], learning_rate: 0.010536102578043938, Error: 0.294200019836, Cost: 8209.7584
+fc_layers: [], conv_filters: [32, 64], conv_pools: [3, 2], conv_kernels: [7, 7], conv_strides: [2, 1], learning_rate: 0.0018016481772065163, Error: 0.353100018501, Cost: 4846.6224
+fc_layers: [], conv_filters: [256, 64, 128], conv_pools: [2, 1, 2], conv_kernels: [7, 5, 7], conv_strides: [2, 1, 1], learning_rate: 0.0010000000474974513, Error: 0.265400013924, Cost: 34975.5952
+fc_layers: [], conv_filters: [32, 256, 16], conv_pools: [2, 1, 2], conv_kernels: [1, 1, 1], conv_strides: [2, 3, 1], learning_rate: 0.005848035681992769, Error: 0.751500009298, Cost: 476.344
+fc_layers: [32, 64], conv_filters: [128, 256, 64], conv_pools: [2, 1, 3], conv_kernels: [3, 1, 5], conv_strides: [1, 1, 1], learning_rate: 0.010536102578043938, Error: 0.348400021791, Cost: 73062.4688
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 3], conv_kernels: [5, 3], conv_strides: [3, 1], learning_rate: 0.018982350826263428, Error: 0.476500023007, Cost: 454.8232
+fc_layers: [128, 32], conv_filters: [16, 256, 16], conv_pools: [1, 2, 1], conv_kernels: [3, 1, 5], conv_strides: [1, 1, 1], learning_rate: 0.010536102578043938, Error: 0.329600021839, Cost: 551067.1792
+fc_layers: [], conv_filters: [16, 32], conv_pools: [3, 2], conv_kernels: [7, 7], conv_strides: [1, 2], learning_rate: 0.0032459362410008907, Error: 0.372900024652, Cost: 3445.1376
+fc_layers: [], conv_filters: [256, 256, 32], conv_pools: [1, 1, 3], conv_kernels: [5, 3, 5], conv_strides: [1, 1, 2], learning_rate: 0.010536102578043938, Error: 0.296200021505, Cost: 46172.9712
+fc_layers: [], conv_filters: [32, 256, 16], conv_pools: [1, 2, 3], conv_kernels: [7, 3, 3], conv_strides: [2, 1, 2], learning_rate: 0.0018016481772065163, Error: 0.444600023627, Cost: 3967.3648
+fc_layers: [], conv_filters: [32, 256, 256], conv_pools: [1, 1, 2], conv_kernels: [5, 5, 3], conv_strides: [2, 1, 2], learning_rate: 0.0010000000474974513, Error: 0.291500005722, Cost: 47108.3952
+fc_layers: [256], conv_filters: [32, 256, 16], conv_pools: [3, 3, 2], conv_kernels: [7, 7, 3], conv_strides: [1, 1, 1], learning_rate: 0.0010000000474974513, Error: 0.32800001502, Cost: 13084.984
+fc_layers: [32], conv_filters: [64, 64, 32], conv_pools: [2, 3, 2], conv_kernels: [5, 3, 3], conv_strides: [1, 1, 2], learning_rate: 0.0010000000474974513, Error: 0.410400016308, Cost: 4232.6448
+fc_layers: [], conv_filters: [16, 128, 16], conv_pools: [2, 3, 2], conv_kernels: [5, 3, 1], conv_strides: [2, 1, 1], learning_rate: 0.018982350826263428, Error: 0.405900020599, Cost: 716.4336
+fc_layers: [], conv_filters: [256, 128, 64], conv_pools: [2, 2, 2], conv_kernels: [7, 3, 1], conv_strides: [2, 2, 1], learning_rate: 0.018982350826263428, Error: 0.396100019217, Cost: 3763.6656
+fc_layers: [], conv_filters: [16, 128, 64], conv_pools: [2, 2, 3], conv_kernels: [5, 7, 1], conv_strides: [1, 2, 1], learning_rate: 0.0018016481772065163, Error: 0.374000020027, Cost: 2560.5808
+fc_layers: [], conv_filters: [32, 128, 128], conv_pools: [2, 1, 3], conv_kernels: [5, 3, 5], conv_strides: [2, 2, 1], learning_rate: 0.010536102578043938, Error: 0.343400024176, Cost: 5392.2736
+fc_layers: [], conv_filters: [64, 64, 16], conv_pools: [3, 1, 3], conv_kernels: [7, 5, 5], conv_strides: [1, 2, 1], learning_rate: 0.005848035681992769, Error: 0.31840002656, Cost: 5167.9536
+fc_layers: [], conv_filters: [16, 32, 32], conv_pools: [3, 1, 2], conv_kernels: [7, 7, 7], conv_strides: [2, 1, 1], learning_rate: 0.0018016481772065163, Error: 0.363300025463, Cost: 4482.5264
+fc_layers: [], conv_filters: [16, 64], conv_pools: [3, 2], conv_kernels: [7, 5], conv_strides: [2, 2], learning_rate: 0.005848035681992769, Error: 0.41750002861, Cost: 1488.4784
+fc_layers: [], conv_filters: [16, 128, 16], conv_pools: [3, 2, 2], conv_kernels: [7, 5, 3], conv_strides: [1, 2, 1], learning_rate: 0.0032459362410008907, Error: 0.358800022602, Cost: 3049.1312
+fc_layers: [], conv_filters: [32, 64, 64], conv_pools: [2, 2, 2], conv_kernels: [5, 3, 5], conv_strides: [2, 1, 1], learning_rate: 0.005848035681992769, Error: 0.371300022602, Cost: 4996.7024
+fc_layers: [], conv_filters: [32, 128, 64], conv_pools: [2, 2, 2], conv_kernels: [5, 3, 5], conv_strides: [1, 2, 1], learning_rate: 0.010536102578043938, Error: 0.318200018406, Cost: 7195.7424
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 3], conv_kernels: [5, 3], conv_strides: [2, 1], learning_rate: 0.018982350826263428, Error: 0.512700024843, Cost: 544.312
+fc_layers: [], conv_filters: [16, 64], conv_pools: [3, 3], conv_kernels: [5, 5], conv_strides: [2, 1], learning_rate: 0.0010000000474974513, Error: 0.380200022459, Cost: 1329.848
+fc_layers: [64], conv_filters: [32, 128, 16], conv_pools: [3, 3, 1], conv_kernels: [7, 5, 3], conv_strides: [2, 1, 1], learning_rate: 0.005848035681992769, Error: 0.330300019979, Cost: 4198.2256
+fc_layers: [], conv_filters: [16, 32], conv_pools: [3, 3], conv_kernels: [5, 3], conv_strides: [2, 1], learning_rate: 0.0032459362410008907, Error: 0.451100022793, Cost: 705.464
+fc_layers: [32], conv_filters: [128, 128], conv_pools: [1, 1], conv_kernels: [7, 7], conv_strides: [3, 1], learning_rate: 0.11100946366786957, Error: 0.379600018263, Cost: 511517.972
+fc_layers: [128], conv_filters: [128, 256, 256, 256], conv_pools: [1, 1, 3, 1], conv_kernels: [1, 1, 3, 1], conv_strides: [3, 1, 2, 3], learning_rate: 0.0010000000474974513, Error: 0.55510001719, Cost: 37697.3128
+fc_layers: [], conv_filters: [64, 128, 32], conv_pools: [3, 1, 3], conv_kernels: [7, 3, 3], conv_strides: [1, 2, 1], learning_rate: 0.005848035681992769, Error: 0.390300030708, Cost: 3592.1456
+fc_layers: [], conv_filters: [32, 128, 64], conv_pools: [3, 1, 2], conv_kernels: [7, 7, 3], conv_strides: [2, 3, 1], learning_rate: 0.0010000000474974513, Error: 0.382400017977, Cost: 3860.8944
+fc_layers: [128, 64], conv_filters: [16, 128, 64], conv_pools: [3, 2, 3], conv_kernels: [7, 1, 1], conv_strides: [1, 1, 2], learning_rate: 0.0032459362410008907, Error: 0.437900031805, Cost: 18541.1888
+fc_layers: [], conv_filters: [64, 128, 32], conv_pools: [3, 2, 2], conv_kernels: [7, 5, 3], conv_strides: [2, 1, 1], learning_rate: 0.018982350826263428, Error: 0.330100023746, Cost: 3813.432
+fc_layers: [32], conv_filters: [16], conv_pools: [2], conv_kernels: [7], conv_strides: [1], learning_rate: 0.0032459362410008907, Error: 0.504500020146, Cost: 133568.824
+fc_layers: [32], conv_filters: [256, 256, 256], conv_pools: [1, 1, 2], conv_kernels: [7, 5, 5], conv_strides: [2, 2, 1], learning_rate: 0.0010000000474974513, Error: 0.294700003862, Cost: 151454.2128
+fc_layers: [], conv_filters: [64, 128, 16], conv_pools: [3, 3, 2], conv_kernels: [7, 3, 3], conv_strides: [1, 1, 1], learning_rate: 0.010536102578043938, Error: 0.334500021935, Cost: 3609.3232
+fc_layers: [], conv_filters: [128, 64, 32], conv_pools: [3, 1, 2], conv_kernels: [7, 5, 7], conv_strides: [1, 2, 1], learning_rate: 0.018982350826263428, Error: 0.310300016403, Cost: 9996.4976
+fc_layers: [], conv_filters: [32, 256, 256], conv_pools: [2, 1, 3], conv_kernels: [7, 7, 5], conv_strides: [2, 2, 1], learning_rate: 0.010536102578043938, Error: 0.350100024939, Cost: 11882.296
+fc_layers: [], conv_filters: [32, 128, 64], conv_pools: [2, 1, 2], conv_kernels: [5, 5, 5], conv_strides: [2, 2, 1], learning_rate: 0.010536102578043938, Error: 0.345800018311, Cost: 7252.472
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [3, 3], conv_strides: [2, 2], learning_rate: 0.0018016481772065163, Error: 0.518800025582, Cost: 391.2496
+fc_layers: [], conv_filters: [256, 128, 256], conv_pools: [3, 1, 3], conv_kernels: [7, 7, 7], conv_strides: [1, 2, 1], learning_rate: 0.0010000000474974513, Error: 0.251100013256, Cost: 26012.1136
+fc_layers: [], conv_filters: [128, 128, 256], conv_pools: [1, 2, 2], conv_kernels: [7, 7, 3], conv_strides: [1, 1, 1], learning_rate: 0.010536102578043938, Error: 0.265800013542, Cost: 222040.0176
+fc_layers: [], conv_filters: [32, 256, 128, 64], conv_pools: [2, 2, 2, 1], conv_kernels: [5, 7, 7, 5], conv_strides: [1, 1, 2, 1], learning_rate: 0.010536102578043938, Error: 0.316500024796, Cost: 24945.7584
+fc_layers: [], conv_filters: [32, 64], conv_pools: [3, 3], conv_kernels: [5, 5], conv_strides: [3, 1], learning_rate: 0.010536102578043938, Error: 0.411600027084, Cost: 1636.788
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [1, 1], conv_strides: [2, 2], learning_rate: 0.010536102578043938, Error: 0.77860000819, Cost: 186.7184
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [3, 5], conv_strides: [2, 2], learning_rate: 0.010536102578043938, Error: 0.414800020456, Cost: 663.8384
+fc_layers: [128], conv_filters: [256, 128, 256], conv_pools: [3, 2, 1], conv_kernels: [7, 7, 5], conv_strides: [1, 1, 1], learning_rate: 0.0010000000474974513, Error: 0.251200008392, Cost: 852969.9376
+fc_layers: [], conv_filters: [128, 128, 16], conv_pools: [1, 1, 3], conv_kernels: [7, 3, 3], conv_strides: [1, 3, 1], learning_rate: 0.0032459362410008907, Error: 0.40440002203, Cost: 6992.4144
+fc_layers: [64], conv_filters: [32, 128, 16], conv_pools: [2, 2, 2], conv_kernels: [7, 7, 7], conv_strides: [1, 1, 3], learning_rate: 0.0018016481772065163, Error: 0.309500020742, Cost: 14043.3456
+fc_layers: [256], conv_filters: [16, 256, 128, 32], conv_pools: [1, 1, 1, 2], conv_kernels: [7, 5, 3, 1], conv_strides: [1, 3, 2, 2], learning_rate: 0.11100946366786957, Error: 0.542100018859, Cost: 15846.1872
+fc_layers: [], conv_filters: [16], conv_pools: [3], conv_kernels: [7], conv_strides: [3], learning_rate: 0.018982350826263428, Error: 0.523100025654, Cost: 1725.4344
+fc_layers: [], conv_filters: [128, 128, 128], conv_pools: [2, 1, 3], conv_kernels: [7, 3, 5], conv_strides: [2, 2, 1], learning_rate: 0.010536102578043938, Error: 0.331300026178, Cost: 6560.5168
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [3, 3], conv_strides: [3, 1], learning_rate: 0.0018016481772065163, Error: 0.502700025439, Cost: 365.0056
+fc_layers: [], conv_filters: [16, 16], conv_pools: [2, 3], conv_kernels: [3, 1], conv_strides: [2, 2], learning_rate: 0.0010000000474974513, Error: 0.663400015235, Cost: 255.7616
+fc_layers: [], conv_filters: [16, 16], conv_pools: [2, 3], conv_kernels: [3, 1], conv_strides: [3, 1], learning_rate: 0.018982350826263428, Error: 0.6474000144, Cost: 230.5544
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [1, 3], conv_strides: [3, 1], learning_rate: 0.0032459362410008907, Error: 0.607800008655, Cost: 320.0968
+fc_layers: [], conv_filters: [16, 32, 64, 16, 32, 128], conv_pools: [1, 2, 1, 1, 1, 1], conv_kernels: [5, 7, 3, 3, 5, 1], conv_strides: [3, 1, 2, 1, 1, 2], learning_rate: 0.11100946366786957, Error: 0.382500029802, Cost: 8143.0536
+fc_layers: [64], conv_filters: [16, 128, 32, 64, 16, 64], conv_pools: [2, 2, 3, 1, 1, 1], conv_kernels: [3, 7, 5, 5, 5, 3], conv_strides: [1, 2, 1, 2, 2, 2], learning_rate: 0.0032459362410008907, Error: 0.357300018072, Cost: 12272.3888
+fc_layers: [], conv_filters: [16, 128, 32], conv_pools: [2, 2, 3], conv_kernels: [5, 5, 3], conv_strides: [1, 1, 2], learning_rate: 0.0010000000474974513, Error: 0.39430003047, Cost: 3372.2544
+fc_layers: [], conv_filters: [16, 16], conv_pools: [2, 3], conv_kernels: [5, 1], conv_strides: [3, 1], learning_rate: 0.018982350826263428, Error: 0.603600010276, Cost: 320.372
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 3], conv_kernels: [3, 1], conv_strides: [3, 1], learning_rate: 0.005848035681992769, Error: 0.615700012445, Cost: 228.7112
+fc_layers: [], conv_filters: [16, 16], conv_pools: [2, 2], conv_kernels: [3, 3], conv_strides: [3, 3], learning_rate: 0.005848035681992769, Error: 0.608600017428, Cost: 359.8216
+fc_layers: [], conv_filters: [256], conv_pools: [2], conv_kernels: [1], conv_strides: [3], learning_rate: 0.005848035681992769, Error: 0.650600016117, Cost: 64466.4136
+fc_layers: [], conv_filters: [16, 32], conv_pools: [3, 3], conv_kernels: [5, 3], conv_strides: [3, 1], learning_rate: 0.018982350826263428, Error: 0.502700028419, Cost: 615.9752
+fc_layers: [], conv_filters: [16, 16], conv_pools: [2, 2], conv_kernels: [1, 1], conv_strides: [2, 3], learning_rate: 0.010536102578043938, Error: 0.775200009346, Cost: 186.7184
+fc_layers: [], conv_filters: [16, 16], conv_pools: [2, 3], conv_kernels: [5, 1], conv_strides: [3, 1], learning_rate: 0.0018016481772065163, Error: 0.611000013947, Cost: 320.372
+fc_layers: [], conv_filters: [64, 16], conv_pools: [3, 3], conv_kernels: [3, 1], conv_strides: [2, 1], learning_rate: 0.005848035681992769, Error: 0.583200016022, Cost: 313.4384
+fc_layers: [], conv_filters: [32, 32], conv_pools: [3, 2], conv_kernels: [5, 7], conv_strides: [2, 2], learning_rate: 0.0010000000474974513, Error: 0.353700015545, Cost: 2205.1504
+fc_layers: [128, 32], conv_filters: [32], conv_pools: [3], conv_kernels: [5], conv_strides: [2], learning_rate: 0.20000000298023224, Error: 0.384200025797, Cost: 107798.3152
+fc_layers: [], conv_filters: [128, 128, 32], conv_pools: [3, 3, 2], conv_kernels: [7, 5, 5], conv_strides: [1, 1, 1], learning_rate: 0.018982350826263428, Error: 0.39120002389, Cost: 10464.4656
+fc_layers: [], conv_filters: [16, 256, 256], conv_pools: [2, 2, 2], conv_kernels: [3, 7, 7], conv_strides: [1, 1, 3], learning_rate: 0.005848035681992769, Error: 0.310700013638, Cost: 18390.4176
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [1, 1], conv_strides: [3, 1], learning_rate: 0.0010000000474974513, Error: 0.689100015163, Cost: 183.8024
+fc_layers: [], conv_filters: [16, 32], conv_pools: [3, 2], conv_kernels: [5, 5], conv_strides: [3, 1], learning_rate: 0.0010000000474974513, Error: 0.450600019693, Cost: 888.564
+fc_layers: [], conv_filters: [16, 256, 256, 32], conv_pools: [1, 2, 2, 2], conv_kernels: [5, 7, 3, 1], conv_strides: [3, 1, 1, 1], learning_rate: 0.06161550432443619, Error: 0.454800022244, Cost: 4911.7576
+fc_layers: [], conv_filters: [64, 16], conv_pools: [3, 3], conv_kernels: [3, 1], conv_strides: [2, 1], learning_rate: 0.0032459362410008907, Error: 0.644200016856, Cost: 313.4384
+fc_layers: [128, 256], conv_filters: [256, 256, 64], conv_pools: [1, 2, 1], conv_kernels: [5, 3, 7], conv_strides: [2, 1, 2], learning_rate: 0.010536102578043938, Error: 0.331300014257, Cost: 188351.1216
+fc_layers: [], conv_filters: [64, 256, 256], conv_pools: [2, 1, 3], conv_kernels: [5, 5, 7], conv_strides: [1, 2, 2], learning_rate: 0.018982350826263428, Error: 0.270700004101, Cost: 19532.7408
+fc_layers: [], conv_filters: [128, 256, 128], conv_pools: [1, 1, 3], conv_kernels: [3, 5, 3], conv_strides: [1, 2, 2], learning_rate: 0.005848035681992769, Error: 0.345400019884, Cost: 17846.8528
+fc_layers: [], conv_filters: [32, 128, 128], conv_pools: [2, 1, 3], conv_kernels: [5, 5, 7], conv_strides: [1, 1, 2], learning_rate: 0.0010000000474974513, Error: 0.248500006199, Cost: 17221.5216
+fc_layers: [], conv_filters: [128, 256, 32], conv_pools: [1, 1, 1], conv_kernels: [5, 3, 7], conv_strides: [1, 1, 2], learning_rate: 0.005848035681992769, Error: 0.336600017548, Cost: 128448.3504
+fc_layers: [], conv_filters: [16, 64], conv_pools: [3, 2], conv_kernels: [5, 5], conv_strides: [2, 2], learning_rate: 0.010536102578043938, Error: 0.371800019741, Cost: 1283.768
+fc_layers: [], conv_filters: [16, 64], conv_pools: [3, 2], conv_kernels: [5, 7], conv_strides: [2, 2], learning_rate: 0.0010000000474974513, Error: 0.3604000175, Cost: 1692.6512
+fc_layers: [], conv_filters: [16, 16], conv_pools: [2, 2], conv_kernels: [1, 1], conv_strides: [3, 3], learning_rate: 0.11100946366786957, Error: 0.816500007212, Cost: 183.2264
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [3, 5], conv_strides: [3, 1], learning_rate: 0.0032459362410008907, Error: 0.504600019455, Cost: 637.5944
+fc_layers: [], conv_filters: [32, 16, 64, 32, 256], conv_pools: [1, 1, 2, 2, 3], conv_kernels: [5, 5, 3, 7, 5], conv_strides: [1, 1, 1, 1, 3], learning_rate: 0.03419951722025871, Error: 0.365700012445, Cost: 20878.4304
+fc_layers: [32, 128], conv_filters: [32], conv_pools: [1], conv_kernels: [7], conv_strides: [3], learning_rate: 0.005848035681992769, Error: 0.412400022745, Cost: 130485.8824
+fc_layers: [256], conv_filters: [256, 64], conv_pools: [2, 1], conv_kernels: [3, 7], conv_strides: [1, 3], learning_rate: 0.0032459362410008907, Error: 0.291200009584, Cost: 612670.6352
+fc_layers: [], conv_filters: [16, 256, 128], conv_pools: [2, 1, 3], conv_kernels: [5, 5, 7], conv_strides: [1, 2, 2], learning_rate: 0.0010000000474974513, Error: 0.274500014782, Cost: 16490.5648
+fc_layers: [], conv_filters: [32, 16, 16], conv_pools: [2, 1, 1], conv_kernels: [3, 7, 5], conv_strides: [2, 2, 1], learning_rate: 0.11100946366786957, Error: 0.449000029564, Cost: 4849.912
+fc_layers: [], conv_filters: [16, 128, 256], conv_pools: [1, 2, 1], conv_kernels: [7, 7, 1], conv_strides: [1, 2, 1], learning_rate: 0.11100946366786957, Error: 0.376600025892, Cost: 168666.5008
+fc_layers: [128], conv_filters: [16, 128, 256], conv_pools: [3, 2, 1], conv_kernels: [1, 7, 1], conv_strides: [1, 2, 1], learning_rate: 0.06161550432443619, Error: 0.601100015044, Cost: 134386.8592
+fc_layers: [256, 32], conv_filters: [16, 32], conv_pools: [1, 3], conv_kernels: [7, 7], conv_strides: [3, 2], learning_rate: 0.010536102578043938, Error: 0.418000024557, Cost: 42839.4952
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [5, 3], conv_strides: [2, 2], learning_rate: 0.010536102578043938, Error: 0.475900031328, Cost: 527.7232
+fc_layers: [], conv_filters: [16, 16], conv_pools: [3, 2], conv_kernels: [5, 3], conv_strides: [2, 2], learning_rate: 0.0032459362410008907, Error: 0.516700019836, Cost: 527.7232
+fc_layers: [], conv_filters: [16, 32], conv_pools: [3, 2], conv_kernels: [3, 5], conv_strides: [2, 2], learning_rate: 0.010536102578043938, Error: 0.429400023222, Cost: 824.9904
+fc_layers: [128, 128], conv_filters: [16], conv_pools: [3], conv_kernels: [5], conv_strides: [2], learning_rate: 0.0018016481772065163, Error: 0.357800029516, Cost: 69573.0608
+fc_layers: [32], conv_filters: [32, 256], conv_pools: [1, 3], conv_kernels: [3, 1], conv_strides: [2, 1], learning_rate: 0.20000000298023224, Error: 0.404100028276, Cost: 206764.6128
+fc_layers: [64], conv_filters: [256, 128, 256], conv_pools: [2, 1, 2], conv_kernels: [7, 5, 7], conv_strides: [1, 1, 2], learning_rate: 0.0018016481772065163, Error: 0.253200012445, Cost: 293265.464
+fc_layers: [32], conv_filters: [16, 64, 16], conv_pools: [3, 3, 1], conv_kernels: [7, 7, 5], conv_strides: [2, 1, 1], learning_rate: 0.018982350826263428, Error: 0.480000035763, Cost: 3792.5808
+fc_layers: [32, 128], conv_filters: [256, 32], conv_pools: [2, 3], conv_kernels: [7, 1], conv_strides: [2, 2], learning_rate: 0.06161550432443619, Error: 0.641500015259, Cost: 7149.5216
