@@ -1,6 +1,14 @@
 # OPAL (Ordinary People Accelerating Learning)
 
-*OPAL* is design tool that uses artificial neural networks (ANN) to automate the design and optimization of other ANNs: neural networks designing neural networks. *OPAL* is available for download as a compiled library (developed in python3) for educational and research purposes. Source code is available for educational and research purposes upon request at [brett.meyer@mcgill.ca](mailto:brett.meyer@mcgill.ca); for commercialization options, [contact us](mailto:brett.meyer@mcgill.ca).
+*OPAL* makes deep learning easy.  *OPAL* is design tool that uses artificial neural networks (ANN) to automate the design and optimization of other ANNs: neural networks designing neural networks.  Conventional ANN design requires machine learning expertise, and time: with the right background and enough effort, custom solutions can be developed for a variety of learning problems.  However, not everyone has a computer science degree; if you don't, *OPAL* is for you.
+
+<img align="right" alt="OPAL exposes trade-offs in ANN design spaces." src="http://rssl.ece.mcgill.ca/~bhm/images/opal-tradeoffs.png">
+
+Traditional ANN design is focused on prediction accuracy.  Consider the example graph on the right, which plots design complexity (e.g., computational cost) versus prediction accuracy.  After a lengthy optimization process, the black diamond is found: the design with the least error.  However, computational cost is a concern in large ANN: e.g., every additional network layer adds delay, power consumption, and design cost.  Often, cheaper solutions are available that sacrifice little or no accuracy; unfortunately, it is difficult to find these by hand.
+
+*OPAL* uses machine learning to find the best possible trade-offs for your machine learning problem, whether you're solving a new one, or simply trying to find a more efficient implementation, e.g., for a mobile platform.  Rather than target the most accurate implementation, OPAL searches for the best trade-offs (or Pareto points, the red diamonds), allowing ANN designers to select the implementation that strikes the most appropriate balance between different design constraints.  OPAL then generates the [theano](http://deeplearning.net/software/theano/) or [TensorFlow](https://www.tensorflow.org/) configuration file required to put your ANN into use.
+
+*OPAL* is available for download as a compiled library (developed in python3) for educational and research purposes. Source code is available for educational and research purposes upon request at [opal@campus.mcgill.ca](mailto:opal@campus.mcgill.ca); for commercialization options, [contact us](mailto:opal@campus.mcgill.ca).
 
 *OPAL* is a joint effort between the Reliable Silicon Systems Lab (RSSL) directed by Professor [Brett H. Meyer](http://rssl.ece.mcgill.ca) and the Integrated Systems for Information Processor (ISIP) Lab directed by Professor [Warren J. Gross](http://www.isip.ece.mcgill.ca). If you use *OPAL* in your research, please cite [our paper](https://arxiv.org/abs/1611.02120):
 > Sean C. Smithson, Guang Yang, Warren J. Gross, and Brett H. Meyer, "Neural networks designing neural networks: Multi-objective hyper-parameter optimization," 2016 International Conference On Computer Aided Design (ICCAD’16), November 2016.
@@ -64,8 +72,11 @@ mac_cost | The weighted cost given to the need for a multiply-accumulate operati
 max_cost | The maximum network cost that will be evaluated; useful when exploring very deep architectures. | Any valid floating point value, notations such as *1e5* will be evaluated internally.
 
 
-### [Parameters] Section:
+### [Parameters] and [RSM] Sections:
 
+Note that care should be taken when writing the [Parameters] and [RSM] sections of configuration files, as the parameter strings are executed by the Python interpreter. This ability was added for convenience when specifying parameters with many values to be explored; it is a given that the tool should not be run with root privileges.
+
+<!--
 The [Parameters] section.
 
 Parameter | Description | Possible Values
@@ -96,8 +107,7 @@ conv_pools |  |
 conv_dropouts |  | 
 conv_activation |  | 
 out_activation |  | 
-
-Note that care should be taken when writing the [Parameters] and [RSM] sections of configuration files, as the parameter strings are executed by the Python interpreter. This ability was added for convenience when specifying parameters with many values to be explored; it is a given that the tool should not be run with root privileges.
+-->
 
 
 ## Dependencies
@@ -111,6 +121,4 @@ Aside from a working Python installation (>= 3.5), the following libraries are r
 
 The provided AMD64 builds have been tested on Ubuntu versions 14.04 and 16.04, with numpy 1.11.3, scipy 0.18.1, matplotlib 2.0.0, tensorflow 1.0.0, and keras 1.2.2. However, the release may still function with earlier versions.
 
-
 <!-- ## Frequently Asked Questions -->
-
