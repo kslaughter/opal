@@ -45,6 +45,7 @@ train_output_filename | Same as above, but the training outputs | Any value that
 test_input_filename | Same as above, but the testing inputs | Any value that is a valid file name
 test_output_filename | Same as above, but the testing outputs | Any value that is a valid file name
 network_type | Type of neural network being designed | *MLP* or *CNN*
+metric | Name of the desired performance metric to use | *top1* (or *accuracy*), *top5*, or *mse*
 
 
 ### [DSE] Section:
@@ -116,8 +117,8 @@ Aside from a working Python installation (>= 3.5), the following libraries are r
  - [numpy](http://www.numpy.org/)
  - [scipy](http://www.scipy.org/)
  - [matplotlib](http://matplotlib.org/)
- - [tensorflow](https://www.tensorflow.org/)
  - [keras](https://keras.io/)
+ - [tensorflow](https://www.tensorflow.org/) or [theano](http://www.deeplearning.net/software/theano/)
 
 The provided AMD64 builds have been tested on Ubuntu versions 14.04 and 16.04, with numpy 1.11.3, scipy 0.18.1, matplotlib 2.0.0, tensorflow 1.0.0, and keras 1.2.2. However, the release may still function with earlier versions.
 
