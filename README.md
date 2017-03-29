@@ -10,7 +10,7 @@ Traditional ANN design is focused on prediction accuracy.  Consider the example 
 
 *OPAL* is available for download as a compiled library (developed in python3) for educational and research purposes. Source code is available for educational and research purposes upon request at [opal@campus.mcgill.ca](mailto:opal@campus.mcgill.ca); for commercialization options, [contact us](mailto:opal@campus.mcgill.ca).
 
-*OPAL* is a joint effort between the Reliable Silicon Systems Lab (RSSL) directed by Professor [Brett H. Meyer](http://rssl.ece.mcgill.ca) and the Integrated Systems for Information Processor (ISIP) Lab directed by Professor [Warren J. Gross](http://www.isip.ece.mcgill.ca). If you use *OPAL* in your research, please cite [our paper](https://arxiv.org/abs/1611.02120):
+*OPAL* is a joint effort between the Reliable Silicon Systems Lab (RSSL) directed by Professor [Brett H. Meyer](http://rssl.ece.mcgill.ca) and the Integrated Systems for Information Processor (ISIP) Lab directed by Professor [Warren J. Gross](http://www.isip.ece.mcgill.ca). If you use *OPAL* in your research, please cite [our paper](http://ieeexplore.ieee.org/document/7827681/):
 > Sean C. Smithson, Guang Yang, Warren J. Gross, and Brett H. Meyer, "Neural networks designing neural networks: Multi-objective hyper-parameter optimization," 2016 International Conference On Computer Aided Design (ICCAD’16), November 2016.
 
 
