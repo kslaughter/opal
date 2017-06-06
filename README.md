@@ -6,7 +6,7 @@
 
 Traditional ANN design is focused on prediction accuracy.  Consider the example graph on the right, which plots design complexity (e.g., computational cost) versus prediction accuracy.  After a lengthy optimization process, the black diamond is found: the design with the least error.  However, computational cost is a concern in large ANN: e.g., every additional network layer adds delay, power consumption, and design cost.  Often, cheaper solutions are available that sacrifice little or no accuracy; unfortunately, it is difficult to find these by hand.
 
-*OPAL* uses machine learning to find the best possible trade-offs for your machine learning problem, whether you're solving a new one, or simply trying to find a more efficient implementation, e.g., for a mobile platform.  Rather than target the most accurate implementation, OPAL searches for the best trade-offs (or Pareto points, the red diamonds), allowing ANN designers to select the implementation that strikes the most appropriate balance between different design constraints.  OPAL then generates the [theano](http://deeplearning.net/software/theano/) or [TensorFlow](https://www.tensorflow.org/) configuration file required to put your ANN into use.
+*OPAL* uses machine learning to find the best possible trade-offs for your machine learning problem, whether you're solving a new one, or simply trying to find a more efficient implementation, e.g., for a mobile platform.  Rather than target the most accurate implementation, OPAL searches for the best trade-offs (or Pareto points, the red diamonds), allowing ANN designers to select the implementation that strikes the most appropriate balance between different design constraints.  OPAL then generates the [TensorFlow](https://www.tensorflow.org/) configuration file required to put your ANN into use.
 
 *OPAL* is available for download as a compiled library (developed in python3) for educational and research purposes. Source code is available for educational and research purposes upon request at [opal@campus.mcgill.ca](mailto:opal@campus.mcgill.ca); for commercialization options, [contact us](mailto:opal@campus.mcgill.ca).
 
@@ -118,7 +118,7 @@ Aside from a working Python installation (>= 3.5), the following libraries are r
  - [scipy](http://www.scipy.org/)
  - [matplotlib](http://matplotlib.org/)
  - [keras](https://keras.io/)
- - [tensorflow](https://www.tensorflow.org/) or [theano](http://www.deeplearning.net/software/theano/)
+ - [tensorflow](https://www.tensorflow.org/)
 
 The provided AMD64 builds have been tested on Ubuntu versions 14.04 and 16.04, with numpy 1.11.3, scipy 0.18.1, matplotlib 2.0.0, tensorflow 1.0.0, and keras 1.2.2. However, the release may still function with earlier versions.
 
